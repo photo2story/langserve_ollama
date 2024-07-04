@@ -18,3 +18,15 @@ prompt = ChatPromptTemplate.from_messages(
 
 # LangChain 표현식 언어 체인 구문을 사용합니다.
 chain = prompt | llm | StrOutputParser()
+
+# 입력 메시지 설정
+messages = [
+    {"role": "user", "content": "안녕하세요! 오늘 날씨는 어때요?"},
+]
+
+# 체인을 통해 메시지를 처리합니다.
+result = chain.invoke({"messages": messages})
+print(result)
+
+# #  .\.venv\Scripts\activate
+# #  python chat.py 

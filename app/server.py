@@ -68,3 +68,17 @@ if __name__ == "__main__":
     import uvicorn
 
     uvicorn.run(app, host="0.0.0.0", port=8000)
+    
+"""
+huggingface-cli download \\
+  heegyu/EEVE-Korean-Instruct-10.8B-v1.0-GGUF \\
+  ggml-model-Q5_K_M.gguf \\
+  --local-dir /modelfile \\
+  --local-dir-use-symlinks False
+  
+ huggingface-cli download heegyu/EEVE-Korean-Instruct-10.8B-v1.0-GGUF ggml-model-Q5_K_M.gguf --local-dir ./models --local-dir-use-symlinks False
+ 
+ cd C:\Users\user\OneDrive\Work\Source\Repos\langserve_ollama\models
+ ollama create EEVE-Korean-10.8B -f Modelfile-V02
+
+"""
